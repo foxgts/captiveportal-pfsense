@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Cativo - Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('captiveportal-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            position: relative;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        .login-form {
+            text-align: center;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            max-width: 300px;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: #4b5563;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: background 0.3s;
+        }
+        .login-form input[type="text"]:focus,
+        .login-form input[type="password"]:focus {
+            background: #6b7280;
+        }
+        .login-form input[type="submit"] {
+            width: 100%;
+            max-width: 300px;
+            padding: 0.8rem;
+            background: #dc2626;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+        .login-form input[type="submit"]:hover {
+            background: #b91c1c;
+        }
+        .error-message {
+            color: #ef4444;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        @media (max-width: 480px) {
+            .logo img {
+                max-width: 125px;
+            }
+            .login-form input[type="text"],
+            .login-form input[type="password"],
+            .login-form input[type="submit"] {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="captiveportal-logo.png" alt="Wi-Fi Logo"/>
+    </div>
+    <div class="error-message">
+        #PORTAL_MESSAGE#
+    </div>
+    <div class="login-form">
+        <form method="post" action="#PORTAL_ACTION#">
+            <input type="text" name="auth_user" placeholder="Usuário" required>
+            <input type="password" name="auth_pass" placeholder="Senha" required style="margin-bottom: 1rem;">
+            <input type="hidden" name="redirurl" value="https://www.google.com">
+            <input type="submit" name="accept" value="Conectar">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro de Autenticação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('captiveportal-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            position: relative;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        .error-message {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .back-form {
+            text-align: center;
+        }
+        .back-form input[type="submit"] {
+            padding: 0.8rem 1.5rem;
+            background: #dc2626;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .back-form input[type="submit"]:hover {
+            background: #b91c1c;
+        }
+        @media (max-width: 480px) {
+            .logo img {
+                max-width: 125px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="captiveportal-logo.png" alt="Wi-Fi Logo"/>
+    </div>
+    <div class="error-message">
+        Credenciais inválidas,<br>verifique usuário e senha e tente novamente.
+    </div>
+    <div class="back-form">
+        <form method="post" action="#PORTAL_ACTION#">
+            <input type="hidden" name="redirurl" value="#PORTAL_REDIRURL#">
+            <input type="submit" name="back" value="Voltar para Login">
+        </form>
+    </div>
+</body>
+</html>
