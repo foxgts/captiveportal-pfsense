@@ -42,7 +42,7 @@ Este repositório contém páginas HTML personalizadas para o Captive Portal do 
 
 ### Pré-requisitos
 - pfSense instalado e configurado com uma zona de Captive Portal.
-- Imagem de fundo (`captiveportal-background.jpg`) e logotipo (`captiveportal-logo.png`) enviados para o mesmo diretório (ex.: via **System > File Manager**).
+- Imagem de fundo (`captiveportal-background.jpg`) e logotipo (criar ou adicionar) (`captiveportal-logo.png`) enviados para o mesmo diretório (ex.: via **System > File Manager**).
 - Certifique-se de que as imagens estejam acessíveis e listadas em **Hostnames Permitidos** ou **Endereços IP Permitidos** se usar URLs externas.
 
 ### Passos
